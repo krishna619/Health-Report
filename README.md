@@ -47,9 +47,6 @@ Create a `.env` file in the root directory of the project and provide the follow
 # Database Configuration
 CONNECTION_STRING=<YOUR CONNECTION_STRING>
 
-# Session Secret
-SESSION_SECRET=<YOUR SESSION_SECRET>
-
 # Access Token Secret
 ACCESS_TOKEN_SECRET=<YOUR ACCESS_TOKEN_SECRET>
 ```
