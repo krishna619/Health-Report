@@ -1,0 +1,45 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Health Report Generator</title>
+</head>
+<body>
+<h1>Enter your details:</h1>
+<form action="/generate-report" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender" required>
+    <option value="">Select</option>
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+    </select><br><br>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" required><br><br>
+
+    <label for="unit">Select the unit:</label>
+    <select id="unit" name="unit" required>
+    <option value="">Select</option>
+    <option value="mg/dl">mg/dl</option>
+    <option value="mmol/L">mmol/L</option>
+    </select><br><br>
+
+    <label for="totalCholesterol">Total blood Cholesterol:</label>
+    <input type="number" id="totalCholesterol" name="totalCholesterol" required><br><br>
+
+    <label for="ldlCholesterol">LDL Cholesterol:</label>
+    <input type="number" id="ldlCholesterol" name="ldlCholesterol" required><br><br>
+
+    <label for="hdlCholesterol">HDL Cholesterol:</label>
+    <input type="number" id="hdlCholesterol" name="hdlCholesterol" required><br><br>
+
+    <label for="triglycerides">Triglycerides:</label>
+    <input type="number" id="triglycerides" name="triglycerides" required><br><br>
+
+    <input type="submit" value="Generate Report">
+</form>
+</body>
+</html>

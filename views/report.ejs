@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Health Report</title>
+</head>
+<body>
+  <h1>Health Report</h1>
+  <ul>
+    <li>Name: <%= name %></li>
+    <li>Gender: <%= gender %></li>
+    <li>Age: <%= age %></li>
+    <li>Unit: <%= unit %></li>
+    <li>Total blood Cholesterol: <%= totalCholesterol %></li>
+    <li>LDL Cholesterol: <%= ldlCholesterol %></li>
+    <li>HDL Cholesterol: <%= hdlCholesterol %></li>
+    <li>Triglycerides: <%= triglycerides %></li>
+    <!-- Include any other form values you want to display -->
+  </ul>
+  <h2>Risk Factors:</h2>
+  <ul>
+    <% riskFactors.forEach(factor => { %>
+      <li><%= factor %></li>
+    <% }) %>
+  </ul>
+  <a href="/download-report" download >Download PDF Report</a>
+</body>
+</html>
