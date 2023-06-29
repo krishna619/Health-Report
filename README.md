@@ -1,7 +1,6 @@
 # Health Report
 
-
-Health Report is a web application designed to help individuals track and manage their cholestrol information. 
+Health Report is a web application designed to help individuals track and manage their health-related information.
 
 ## Features
 
@@ -28,7 +27,7 @@ cd Health-Report
 npm install
 ```
 
-3. Set up the database connection by configuring the `.env` file with your database credentials.
+3. Set up the database connection by configuring the `.env` file with your database credentials. Replace `<YOUR CONNECTION_STRING>` with the connection string for your database.
 
 4. Start the application:
 
@@ -39,15 +38,33 @@ npm start
 5. Open your browser and navigate to `http://localhost:3000` to access the Health Report application.
 
 **Note**: Please ensure that you have Node.js and MongoDB installed on your system before running the application.
-add .env file 
+
+## Configuration
+
+Create a `.env` file in the root directory of the project and provide the following configuration:
+
+```
+# Database Configuration
 CONNECTION_STRING=<YOUR CONNECTION_STRING>
+
+# Session Secret
+SESSION_SECRET=<YOUR SESSION_SECRET>
+
+# Access Token Secret
 ACCESS_TOKEN_SECRET=<YOUR ACCESS_TOKEN_SECRET>
+```
+Replace `<YOUR CONNECTION_STRING>` with the connection string for your database.
+
+Replace `<YOUR ACCESS_TOKEN_SECRET>` with a secure secret key used for signing and verifying access tokens.
+
+Remember to keep the `.env` file secure and avoid committing it to version control to protect sensitive information.
 
 ## Contributing
 
-Contributions to Health Report are welcome! If you find any bugs or would like to suggest new features, please create a new issue or submit a pull request. 
+Contributions to Health Report are welcome! If you find any bugs or would like to suggest new features, please create a new issue or submit a pull request.
 
 Before contributing, please review the [Contributing Guidelines](CONTRIBUTING.md) for more information.
+
 
 ## Acknowledgements
 
@@ -56,4 +73,3 @@ Before contributing, please review the [Contributing Guidelines](CONTRIBUTING.md
 - [Express](https://expressjs.com/): A fast and minimalist web application framework for Node.js.
 
 - [Mongoose](https://mongoosejs.com/): An object modeling tool for MongoDB and Node.js, used for interacting with the database and defining the user schema.
-
